@@ -1,0 +1,44 @@
+{
+  "name": "linkedin-auto-connect",
+  "version": "1.0.0",
+  "description": "An automation script for connecting with peoples in LinkedIn automatically",
+  "main": "index.js",
+  "bin": {
+    "linkedin-auto-connect": "bin/cli.js",
+    "lac": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rousan/linkedin-auto-connect.git"
+  },
+  "keywords": [
+    "linkedin",
+    "connect",
+    "hack",
+    "invite",
+    "automation",
+    "script",
+    "node",
+    "javascript",
+    "auto",
+    "people"
+  ],
+  "author": "Rousan Ali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rousan/linkedin-auto-connect/issues"
+  },
+  "homepage": "https://github.com/rousan/linkedin-auto-connect#readme",
+  "dependencies": {
+    "commander": "^2.13.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
