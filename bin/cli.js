@@ -16,7 +16,7 @@ let { email, password } = program;
 const schema = {
   properties: {
     email: {
-      description: 'Your LinkedIn email or phone number',
+      description: 'Enter LinkedIn email',
       message: 'Invalid email',
       type: 'string',
       required: true,
@@ -25,7 +25,7 @@ const schema = {
       },
     },
     password: {
-      description: 'Your LinkedIn password',
+      description: 'Enter LinkedIn password',
       message: 'Invalid password',
       type: 'string',
       required: true,
