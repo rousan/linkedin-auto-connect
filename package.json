@@ -33,7 +33,9 @@
   },
   "homepage": "https://github.com/rousan/linkedin-auto-connect#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "commander": "^2.13.0",
+    "moment": "^2.20.1",
     "prompt": "^1.0.0"
   },
   "devDependencies": {

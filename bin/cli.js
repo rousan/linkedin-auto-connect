@@ -3,6 +3,7 @@
 const program = require('commander');
 const prompt = require('prompt');
 const pkg = require('../package.json');
+const scraper = require('../lib/scraper');
 
 program
   .version(pkg.version, '-v, --version')
@@ -17,7 +18,7 @@ const schema = {
   properties: {
     email: {
       description: 'Enter LinkedIn email',
-      message: 'Invalid email',
+      message: 'empty email',
       type: 'string',
       required: true,
       ask() {
@@ -26,7 +27,7 @@ const schema = {
     },
     password: {
       description: 'Enter LinkedIn password',
-      message: 'Invalid password',
+      message: 'empty password',
       type: 'string',
       required: true,
       hidden: true,
@@ -38,8 +39,8 @@ const schema = {
 };
 
 prompt.message = '';
-
 prompt.start();
+
 prompt.get(schema, (err, result) => {
   if (err) {
     console.error('canceled');
@@ -49,6 +50,5 @@ prompt.get(schema, (err, result) => {
 
   email = result.email || email;
   password = result.password || password;
-
-  console.log(email, password);
+  scraper.start(email, password);
 });
