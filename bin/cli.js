@@ -5,6 +5,7 @@ const prompt = require('prompt');
 const pkg = require('../package.json');
 const scraper = require('../lib/scraper');
 
+
 program
   .version(pkg.version, '-v, --version')
   .usage('[options] [-u email] [-p password]')
@@ -55,3 +56,4 @@ prompt.get(schema, (err, result) => {
   password = result.password || password;
   scraper.start(email, password);
 });
+
