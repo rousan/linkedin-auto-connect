@@ -2,7 +2,6 @@
   "name": "linkedin-auto-connect",
   "version": "1.0.0",
   "description": "An automation tool to automate the connection requests in LinkedIn",
-  "main": "index.js",
   "bin": {
     "linkedin-auto-connect": "bin/cli.js",
     "lac": "bin/cli.js"
