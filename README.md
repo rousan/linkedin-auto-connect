@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="400" src="https://rawgit.com/rousan/linkedin-auto-connect/develop/demo.gif" alt="LinkedIn Auto Connect Demo">
+  <img src="https://rawgit.com/rousan/linkedin-auto-connect/develop/demo.gif" alt="LinkedIn Auto Connect Demo">
 	<br>
 	<br>
 </p>
