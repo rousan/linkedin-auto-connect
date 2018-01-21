@@ -38,7 +38,23 @@ If you want to keep your console clean, then just pass `--no-verbose` option.
 
 ## Contributing
 
-Your PRs are welcome.
+Your PRs are always welcome.
+
+Please, try to follow these:
+
+* Clone the repository.
+* Checkout `develop` branch.
+* Install dependencies.
+* Add your new features or fixes.
+* Run `npm start` to start the scraper.
+
+```sh
+$ git clone https://github.com/rousan/linkedin-auto-connect.git
+$ cd linkedin-auto-connect
+$ git checkout develop
+$ npm i
+$ npm start
+```
 
 ## License
 
