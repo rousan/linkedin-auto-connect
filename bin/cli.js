@@ -7,12 +7,15 @@ const scraper = require('../lib/scraper');
 
 program
   .version(pkg.version, '-v, --version')
-  .usage('[-u email] [-p password]')
+  .usage('[options] [-u email] [-p password]')
   .option('-u, --email <linkedin_handle>', 'provide your LinkedIn handle i.e. email or phone number')
   .option('-p, --password <linkedin_password>', 'provide your LinkedIn password')
+  .option('--no-verbose', 'keep your console clean')
   .parse(process.argv);
 
 let { email, password } = program;
+
+global.verbose = program.verbose;
 
 const schema = {
   properties: {

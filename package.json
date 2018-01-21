@@ -1,7 +1,7 @@
 {
   "name": "linkedin-auto-connect",
   "version": "1.0.0",
-  "description": "An automation script for connecting with peoples in LinkedIn automatically",
+  "description": "An automation tool to automate the connection requests in LinkedIn",
   "main": "index.js",
   "bin": {
     "linkedin-auto-connect": "bin/cli.js",
@@ -24,7 +24,9 @@
     "node",
     "javascript",
     "auto",
-    "people"
+    "people",
+    "program",
+    "tool"
   ],
   "author": "Rousan Ali",
   "license": "MIT",
@@ -34,6 +36,7 @@
   "homepage": "https://github.com/rousan/linkedin-auto-connect#readme",
   "dependencies": {
     "axios": "^0.17.1",
+    "colors": "^1.1.2",
     "commander": "^2.13.0",
     "moment": "^2.20.1",
     "prompt": "^1.0.0"
