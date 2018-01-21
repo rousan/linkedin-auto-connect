@@ -7,7 +7,7 @@
     "lac": "bin/cli.js"
   },
   "scripts": {
-    "test": "lac"
+    "start": "node bin/cli.js -u ariyankhan46@gmail.com"
   },
   "repository": {
     "type": "git",
