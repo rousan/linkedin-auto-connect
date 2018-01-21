@@ -8,7 +8,7 @@
     "lac": "bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lac"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,19 @@
     "auto",
     "people",
     "program",
-    "tool"
+    "tool",
+    "automate",
+    "request",
+    "connection",
+    "node",
+    "nodejs",
+    "mac",
+    "windows",
+    "linux",
+    "ubuntu",
+    "download",
+    "install",
+    "npm"
   ],
   "author": "Rousan Ali",
   "license": "MIT",
@@ -38,7 +50,6 @@
     "axios": "^0.17.1",
     "colors": "^1.1.2",
     "commander": "^2.13.0",
-    "moment": "^2.20.1",
     "prompt": "^1.0.0"
   },
   "devDependencies": {
