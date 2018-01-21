@@ -1,6 +1,12 @@
+<p align="center">
+  <img src="https://rawgit.com/rousan/linkedin-auto-connect/develop/demo.gif" alt="LinkedIn Auto Connect Demo">
+	<br>
+	<br>
+</p>
+
 # LinkedIn Auto Connect Tool
 
-Sometimes you want more `LinkedIn` connections, specially `500+`. This tool is very helpful on this.
+Sometimes you want more `LinkedIn` connections, specially `500+`. This tool is very helpful to boost up your connections.
 Just run it from your favorite console or command promt and keep it running until you make enough connection requests.
 
 > An automation tool to automate the connection requests in LinkedIn.
@@ -36,4 +42,4 @@ Your PRs are welcome.
 
 MIT License
 
-### Happy hacking!
+### Happy Hacking!
