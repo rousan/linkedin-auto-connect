@@ -47,26 +47,4 @@ If you want to keep your console clean, then just pass `--no-verbose` option.
 
 **Note**: It does not share your `LinkedIn` credentials, so it is safe to use.
 
-## Contributing
-
-Your PRs and stars are always welcome.
-
-Please, try to follow:
-
-* Clone the repository.
-* Checkout `develop` branch.
-* Install dependencies.
-* Add your new features or fixes.
-* Build the project.
-* Start the scraper.
-
-```sh
-$ git clone https://github.com/rousan/linkedin-auto-connect.git
-$ cd linkedin-auto-connect
-$ git checkout develop
-$ npm i
-$ npm run build
-$ npm start
-```
-
 ### Happy Hacking!
