@@ -1,19 +1,17 @@
-'use strict';
-
-var urls = {
+const urls = {
   login: 'https://www.linkedin.com/uas/login',
   loginSubmit: 'https://www.linkedin.com/uas/login-submit',
   peopleYouMayKnow: 'https://www.linkedin.com/voyager/api/relationships/peopleYouMayKnow',
-  normInvitations: 'https://www.linkedin.com/voyager/api/growth/normInvitations'
+  normInvitations: 'https://www.linkedin.com/voyager/api/growth/normInvitations',
 };
 
-var headers = {
+const headers = {
   loginGET: {
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'accept-encoding': 'gzip, deflate, br',
     'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
   },
 
   loginSubmitPOST: {
@@ -26,7 +24,7 @@ var headers = {
     'pragma': 'no-cache',
     'referer': 'https://www.linkedin.com/uas/login',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
   },
 
   peopleYouMayKnowGET: {
@@ -40,7 +38,7 @@ var headers = {
     'x-li-lang': 'en_US',
     'x-li-track': '{"clientVersion":"1.1.*","osName":"web","timezoneOffset":5.5,"deviceFormFactor":"DESKTOP","mpName":"voyager-web"}',
     'x-requested-with': 'XMLHttpRequest',
-    'x-restli-protocol-version': '2.0.0'
+    'x-restli-protocol-version': '2.0.0',
   },
 
   normInvitationsPOST: {
@@ -56,14 +54,14 @@ var headers = {
     'x-li-lang': 'en_US',
     'x-li-track': '{"clientVersion":"1.1.*","osName":"web","timezoneOffset":5.5,"deviceFormFactor":"DESKTOP","mpName":"voyager-web"}',
     'x-requested-with': 'XMLHttpRequest',
-    'x-restli-protocol-version': '2.0.0'
-  }
+    'x-restli-protocol-version': '2.0.0',
+  },
 };
 
 module.exports = {
-  urls: urls,
-  headers: headers,
+  urls,
+  headers,
   fetchingPeoplesCount: 50,
   requestInterval: 0,
-  peopleProfileType: 'com.linkedin.voyager.identity.shared.MiniProfile'
+  peopleProfileType: 'com.linkedin.voyager.identity.shared.MiniProfile',
 };
