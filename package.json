@@ -52,7 +52,6 @@
     "axios": "^0.17.1",
     "colors": "^1.1.2",
     "commander": "^2.13.0",
-    "get-cursor-position": "^1.0.5",
     "moment": "^2.20.1",
     "prompt": "^1.0.0",
     "word-wrap": "^1.2.3"

@@ -8,7 +8,7 @@ const invitationStatus = {
   success: 0,
   failed: 0,
 };
-let cursorInitialPos;
+let cursorRelYPos;
 let isFirstTime = true;
 
 function invite(sessionCookies, invitees) {
@@ -77,20 +77,31 @@ function printInvite(invitee, isSuccess, successCount, failedCount) {
   if (isFirstCard) {
     isFirstTime = false;
     utils.print('\n');
-    cursorInitialPos = utils.currentCursorPosition();
-    printInviteCard(invitee, isSuccess, successCount, failedCount);
+    cursorRelYPos = printInviteCard(invitee, isSuccess, successCount, failedCount);
   } else {
-    readline.cursorTo(utils.currentPrintStream, cursorInitialPos.col - 1, cursorInitialPos.row - 1);
+    readline.cursorTo(utils.currentPrintStream, 0);
+    readline.moveCursor(utils.currentPrintStream, 0, -cursorRelYPos);
     readline.clearScreenDown(utils.currentPrintStream);
-    printInviteCard(invitee, isSuccess, successCount, failedCount);
+    cursorRelYPos = printInviteCard(invitee, isSuccess, successCount, failedCount);
   }
 }
 
 function printInviteCard(invitee, isSuccess, successCount, failedCount) {
-  // const invTitle = colors.cyan(inviteeName(invitee));
-  const invTitle = inviteeName(invitee);  
+  let totNewLines = 0;
   const wrapTextWidth = utils.currentPrintStream.columns - 10;
-  const invOccupation = colors.grey(utils.wrapText(utils.resolveNewLines(invitee.occupation), { width: wrapTextWidth, indent: '    ' }));
+  const wrapOption = { width: wrapTextWidth, indent: '    ' };
+
+  const wrappedInvName = utils.wrapText(inviteeName(invitee), wrapOption);
+  const wrappedInvOccupation = utils.wrapText(
+    utils.resolveNewLines(invitee.occupation),
+    wrapOption,
+  );
+
+  totNewLines += wrappedInvName.split('\n').length - 1;
+  totNewLines += wrappedInvOccupation.split('\n').length - 1;
+
+  const invTitle = wrappedInvName.trim();
+  const invOccupation = colors.grey(wrappedInvOccupation);
   const statusChar = isSuccess ? colors.green('✓') : colors.red('⨯');
   const successCountMsg = `${colors.grey('Success:')} ${colors.green(`${successCount}`)}`;
   const failedCountMsg = `${colors.grey('Failed:')} ${colors.red(`${failedCount}`)}`;
@@ -108,10 +119,14 @@ function printInviteCard(invitee, isSuccess, successCount, failedCount) {
   utils.print('  ');
   utils.print(elapsedTimeMsg);
   utils.print('\n\n  ');
+
+  totNewLines += 6;
+
+  return totNewLines;
 }
 
 function inviteeName(invitee) {
-  return `${invitee.firstName.trim()} ${invitee.lastName.trim()}`;
+  return utils.resolveNewLines(`${invitee.firstName.trim()} ${invitee.lastName.trim()}`);
 }
 
 module.exports = {

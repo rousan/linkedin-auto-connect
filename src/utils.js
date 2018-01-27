@@ -1,7 +1,6 @@
 const axios = require('axios');
 const wordWrap = require('word-wrap');
 const moment = require('moment');
-const getCursorPosition = require('get-cursor-position');
 
 function parseToCookieKeyValuePairs(cookieHeaders) {
   return cookieHeaders.reduce((keyValuePairs, cookie) => {
@@ -54,7 +53,7 @@ function escapeRegExp(str) {
   return str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
 }
 
-const currentPrintStream = process.stdout;
+const currentPrintStream = process.stderr;
 
 function print(msg) {
   if (global.verbose) {
@@ -75,10 +74,6 @@ function wrapText(text, option) {
   return wordWrap(text, option);
 }
 
-function currentCursorPosition() {
-  return getCursorPosition.sync();
-}
-
 function startTimer() {
   global.startMoment = moment();
 }
@@ -95,7 +90,6 @@ module.exports = {
   print,
   resolveNewLines,
   wrapText,
-  currentCursorPosition,
   currentPrintStream,
   startTimer,
   endTimer,
