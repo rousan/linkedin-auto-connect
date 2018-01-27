@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+title: "LinkedIn Auto Connect Tool"
+description: "An automation tool to automate the connection requests on LinkedIn"
+show_downloads: "true"
