@@ -4,6 +4,13 @@
     <br>
 </p>
 
+[![NPM version](https://img.shields.io/npm/v/linkedin-auto-connect.svg)](https://www.npmjs.com/package/linkedin-auto-connect)
+[![Required Node version](https://img.shields.io/node/v/linkedin-auto-connect.svg)](https://www.npmjs.com/package/linkedin-auto-connect)
+[![NPM total downloads](https://img.shields.io/npm/dt/linkedin-auto-connect.svg)](https://www.npmjs.com/package/linkedin-auto-connect)
+[![Dependency Status](https://img.shields.io/david/rousan/linkedin-auto-connect.svg)](https://david-dm.org/rousan/linkedin-auto-connect)
+[![DevDependency Status](https://img.shields.io/david/dev/rousan/linkedin-auto-connect.svg)](https://david-dm.org/rousan/linkedin-auto-connect?type=dev)
+[![License](https://img.shields.io/github/license/rousan/linkedin-auto-connect.svg)](https://github.com/rousan/linkedin-auto-connect/blob/master/LICENSE)
+
 # LinkedIn Auto Connect Tool
 
 Sometimes you want more `LinkedIn` connections, especially `500+`. This tool is very helpful to boost up your connections.

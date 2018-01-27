@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
-    "start": "node src/cli.js -u rousanali786@gmail.com"
+    "start": "node src/cli.js -u ariyankhan46@gmail.com"
   },
   "repository": {
     "type": "git",
@@ -63,5 +63,8 @@
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
