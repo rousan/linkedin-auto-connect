@@ -18,6 +18,7 @@ function startScraping() {
     .then((sessionCookies) => {
       utils.print(`\n  ${colors.green('Connected.')}`);
       utils.print('\n  ');
+      utils.startTimer();
       fetchNextPeoples(sessionCookies);
     })
     .catch((err) => {
@@ -58,7 +59,7 @@ function onError(err) {
   } else {
     errMsg = err.message;
   }
-  console.error(`\n  ${colors.red('error')}:   ${errMsg}\n`);
+  console.error(`\n  ${colors.red('error')}:   ${errMsg}`);
 }
 
 module.exports = { start };

@@ -1,15 +1,21 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/rousan/linkedin-auto-connect/master/demo.gif" alt="LinkedIn Auto Connect Demo">
-	<br>
-	<br>
+    <br>
+    <br>
 </p>
 
 # LinkedIn Auto Connect Tool
 
-Sometimes you want more `LinkedIn` connections, specially `500+`. This tool is very helpful to boost up your connections.
-Just run it from your favourite terminal or command promt and keep it running until you make enough connection requests.
+Sometimes you want more `LinkedIn` connections, especially `500+`. This tool is very helpful to boost up your connections.
+Just run it from your favorite terminal or command prompt and keep it running until you make enough connection requests.
 
-> An automation tool to automate the connection requests in LinkedIn.
+> An automation tool to automate the connection requests on LinkedIn.
+
+## Requirements
+
+`node` >= `v8.0.0`
+
+**Note**: If `node` and `npm` are not installed, then Install them from [here](https://nodejs.org/en/download/).
 
 ## Installation
 
@@ -20,8 +26,6 @@ $ npm install -g linkedin-auto-connect
 ```
 
 It installs two binaries: `linkedin-auto-connect` and `lac` to your system path.
-
-**Note**: It requires `node` and `npm` installed. Install them from [here](https://nodejs.org/en/download/) if not already installed in your system.
 
 ## Usage
 
