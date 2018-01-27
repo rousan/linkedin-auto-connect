@@ -13,9 +13,9 @@ Just run it from your favorite terminal or command prompt and keep it running un
 
 ## Requirements
 
-`node` >= `v8.0.0`
+`node` >= `v4.0.0`
 
-**Note**: If `node` and `npm` are not installed, then Install them from [here](https://nodejs.org/en/download/).
+**Note**: If `node` and `npm` are not installed, Install them from [here](https://nodejs.org/en/download/).
 
 ## Installation
 
@@ -42,26 +42,24 @@ If you want to keep your console clean, then just pass `--no-verbose` option.
 
 ## Contributing
 
-Your PRs are always welcome.
+Your PRs and stars are always welcome.
 
-Please, try to follow these:
+Please, try to follow:
 
 * Clone the repository.
 * Checkout `develop` branch.
 * Install dependencies.
 * Add your new features or fixes.
-* Run `npm start` to start the scraper.
+* Build the project.
+* Start the scraper.
 
 ```sh
 $ git clone https://github.com/rousan/linkedin-auto-connect.git
 $ cd linkedin-auto-connect
 $ git checkout develop
 $ npm i
+$ npm run build
 $ npm start
 ```
-
-## License
-
-MIT License
 
 ### Happy Hacking!
