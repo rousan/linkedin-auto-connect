@@ -3,7 +3,7 @@
 const program = require('commander');
 const prompt = require('prompt');
 const pkg = require('../package.json');
-const scraper = require('../lib/scraper');
+const scraper = require('./scraper');
 
 program
   .version(pkg.version, '-v, --version')

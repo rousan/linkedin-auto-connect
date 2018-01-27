@@ -1,13 +1,14 @@
 {
   "name": "linkedin-auto-connect",
-  "version": "1.0.0",
-  "description": "An automation tool to automate the connection requests in LinkedIn",
+  "version": "1.0.1",
+  "description": "An automation tool to automate the connection requests on LinkedIn",
   "bin": {
-    "linkedin-auto-connect": "bin/cli.js",
-    "lac": "bin/cli.js"
+    "linkedin-auto-connect": "lib/cli.js",
+    "lac": "lib/cli.js"
   },
   "scripts": {
-    "test": "lac"
+    "build": "babel src -d lib",
+    "start": "node src/cli.js -u ariyankhan46@gmail.com"
   },
   "repository": {
     "type": "git",
@@ -35,11 +36,13 @@
     "windows",
     "linux",
     "ubuntu",
+    "unix",
     "download",
     "install",
-    "npm"
+    "npm",
+    "console"
   ],
-  "author": "Rousan Ali",
+  "author": "Rousan Ali <rousanali786@gmail.com> (https://rousan.io)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rousan/linkedin-auto-connect/issues"
@@ -49,11 +52,19 @@
     "axios": "^0.17.1",
     "colors": "^1.1.2",
     "commander": "^2.13.0",
-    "prompt": "^1.0.0"
+    "moment": "^2.20.1",
+    "prompt": "^1.0.0",
+    "word-wrap": "^1.2.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
