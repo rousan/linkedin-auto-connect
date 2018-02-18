@@ -2,3 +2,8 @@ theme: jekyll-theme-cayman
 title: "LinkedIn Auto Connect Tool"
 description: "An automation tool to automate the connection requests on LinkedIn"
 show_downloads: "true"
+google_analytics: "UA-114357378-1"
+theme_color: "#061166"
+github:
+  zip_url: "https://github.com/rousan/linkedin-auto-connect/zipball/master"
+  tar_url: "https://github.com/rousan/linkedin-auto-connect/tarball/master"
