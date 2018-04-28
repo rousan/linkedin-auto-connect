@@ -1,6 +1,6 @@
 const urls = {
-  login: 'https://www.linkedin.com/uas/login',
-  loginSubmit: 'https://www.linkedin.com/uas/login-submit',
+  login: 'https://www.linkedin.com/login',
+  loginSubmit: 'https://www.linkedin.com/login-submit',
   peopleYouMayKnow: 'https://www.linkedin.com/voyager/api/relationships/peopleYouMayKnow',
   normInvitations: 'https://www.linkedin.com/voyager/api/growth/normInvitations',
 };
