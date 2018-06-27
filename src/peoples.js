@@ -2,35 +2,9 @@ const axios = require('axios');
 const utils = require('./utils');
 const constants = require('./constants');
 
-function fetch(sessionCookies, count) {
-  return makeReqPYMKGET(sessionCookies, count)
-    .then(data => normalize(data));
-}
-
-function makeReqPYMKGET(cookies, count) {
-  const csrfToken = utils.trim(cookies.JSESSIONID, '"');
-
-  const query = {
-    count,
-    includeInsights: false,
-    start: 0,
-    usageContext: 'd_flagship3_people',
-  };
-
-  const headers = {
-    ...constants.headers.peopleYouMayKnowGET,
-    cookie: utils.stringifyCookies(cookies),
-    'csrf-token': csrfToken,
-  };
-
-  const reqConfig = {
-    headers,
-    params: query,
-    responseType: 'json',
-  };
-
-  return axios.get(constants.urls.peopleYouMayKnow, reqConfig)
-    .then(response => response.data);
+function fetch(sessionCookies, requestData) {
+  return utils.makeReqPYMKGET(sessionCookies, requestData, constants.headers.peopleYouMayKnowGET)
+   .then(data => normalize(data));
 }
 
 function normalize(data) {

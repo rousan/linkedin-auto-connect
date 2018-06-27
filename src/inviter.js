@@ -17,9 +17,9 @@ function invite(sessionCookies, invitees) {
     (function func() {
       if (idx < invitees.length) {
         makeReqInvitationsPOST(sessionCookies, invitees[idx])
-          .then(() => {
-            func();
-          });
+         .then(() => {
+           func();
+         });
         idx++;
       } else {
         resolve();
@@ -54,24 +54,26 @@ function makeReqInvitationsPOST(cookies, invitee) {
   };
 
   return axios.post(constants.urls.normInvitations, invitationsData, reqConfig)
-    .then(() => {
-      invitationStatus.success++;
-      printInvite(invitee, true, invitationStatus.success, invitationStatus.failed);
-    })
-    .catch((err) => {
-      invitationStatus.failed++;
-      printInvite(invitee, false, invitationStatus.success, invitationStatus.failed);
+   .then(() => {
+     invitationStatus.success++;
+     printInvite(invitee, true, invitationStatus.success, invitationStatus.failed);
+   })
+   .catch((err) => {
+     invitationStatus.failed++;
+     printInvite(invitee, false, invitationStatus.success, invitationStatus.failed);
 
-      const statusCode = err.response.status;
-      if (statusCode === 429) {
-        console.error(`${colors.red('error')}:   too many requests`);
-        process.exit();
-      }
-    });
+     const statusCode = err.response.status;
+     if (statusCode === 429) {
+       console.error(`${colors.red('error')}:   too many requests`);
+       process.exit();
+     }
+   });
 }
 
 function printInvite(invitee, isSuccess, successCount, failedCount) {
-  if (!global.verbose) { return; }
+  if (!global.verbose) {
+    return;
+  }
   const isFirstCard = isFirstTime;
 
   if (isFirstCard) {
@@ -89,12 +91,12 @@ function printInvite(invitee, isSuccess, successCount, failedCount) {
 function printInviteCard(invitee, isSuccess, successCount, failedCount) {
   let totNewLines = 0;
   const wrapTextWidth = utils.currentPrintStream.columns - 10;
-  const wrapOption = { width: wrapTextWidth, indent: '    ' };
+  const wrapOption = {width: wrapTextWidth, indent: '    '};
 
   const wrappedInvName = utils.wrapText(inviteeName(invitee), wrapOption);
   const wrappedInvOccupation = utils.wrapText(
-    utils.resolveNewLines(invitee.occupation),
-    wrapOption,
+   utils.resolveNewLines(invitee.occupation),
+   wrapOption,
   );
 
   totNewLines += wrappedInvName.split('\n').length - 1;

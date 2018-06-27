@@ -27,7 +27,9 @@ function parseSingleCookie(cookieStr) {
 
   for (let i = 1; i < parts.length; ++i) {
     const partPair = parts[i].trim().split('=');
-    if (partPair.length < 2) { continue; }
+    if (partPair.length < 2) {
+      continue;
+    }
     cookieInfo[partPair[0].trim()] = partPair[1].trim();
   }
   return cookieInfo;
@@ -38,10 +40,10 @@ function stringifyCookies(cookiePairs) {
 }
 
 function fetchCookies(url, method, config) {
-  const reqConfig = { url, method, ...config };
+  const reqConfig = {url, method, ...config};
 
   return axios.request(reqConfig)
-    .then(response => parseToCookieKeyValuePairs(response.headers['set-cookie']));
+   .then(response => parseToCookieKeyValuePairs(response.headers['set-cookie']));
 }
 
 function trim(str, chr) {
@@ -82,6 +84,18 @@ function endTimer() {
   return `${moment().diff(global.startMoment, 'second', true)}sec`;
 }
 
+function makeReqPYMKGET(cookies, {url, query = null}, header, responseType = 'json') {
+  const csrfToken = trim(cookies.JSESSIONID, '"');
+  const headers = {...header, cookie: stringifyCookies(cookies), 'csrf-token': csrfToken,};
+  const reqConfig = {
+    headers,
+    responseType: responseType,
+  };
+  if (query) reqConfig.params = query;
+  return axios.get(url, reqConfig)
+   .then(response => response.data)
+}
+
 module.exports = {
   fetchCookies,
   parseToCookieKeyValuePairs,
@@ -91,6 +105,7 @@ module.exports = {
   resolveNewLines,
   wrapText,
   currentPrintStream,
+  makeReqPYMKGET,
   startTimer,
   endTimer,
 };
