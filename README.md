@@ -39,13 +39,17 @@ It installs two binaries: `linkedin-auto-connect` and `lac` to your system path.
 Use it as follows using `lac` command:
 
 ```bash
-$ lac -u <enter_your_linkedin_email>
+$ lac -u <enter_your_linkedin_email> -k <keyword like Full Stack Developer>
 Enter LinkedIn password: *****
 ```
+
+**In the keyword argument, if you type "ALL" then this tool will send invitations request to the people you may know or else you can send the connect with the particular niche people like full stack developer, UI/UX, investors etc.**
 
 If you want to keep your console clean, then just pass `--no-verbose` option.
 
 **Note**: It does not share your `LinkedIn` credentials, so it is safe to use.
+
+
 
 ## Contributing
 

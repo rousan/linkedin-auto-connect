@@ -4,12 +4,12 @@ const utils = require('./utils');
 
 function sessionCookies(email, password) {
   return makeReqLoginGET()
-    .then(cookies => makeReqLoginPOST(email, password, cookies));
+   .then(cookies => makeReqLoginPOST(email, password, cookies));
 }
 
 function makeReqLoginGET() {
   const reqConfig = {
-    headers: { ...constants.headers.loginGET },
+    headers: {...constants.headers.loginGET},
     responseType: 'text',
   };
   return utils.fetchCookies(constants.urls.login, 'get', reqConfig);
@@ -39,7 +39,7 @@ function makeReqLoginPOST(email, password, cookies) {
   };
 
   return utils.fetchCookies(constants.urls.loginSubmit, 'post', reqConfig)
-    .then(cookieUpdates => ({ ...cookies, ...cookieUpdates }));
+   .then(cookieUpdates => ({...cookies, ...cookieUpdates}));
 }
 
 function validateStatusForURLRedirection(status) {

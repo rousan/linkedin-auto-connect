@@ -1,8 +1,13 @@
+const baseURL = 'https://www.linkedin.com/voyager/api';
 const urls = {
   login: 'https://www.linkedin.com/uas/login',
   loginSubmit: 'https://www.linkedin.com/uas/login-submit',
-  peopleYouMayKnow: 'https://www.linkedin.com/voyager/api/relationships/peopleYouMayKnow',
-  normInvitations: 'https://www.linkedin.com/voyager/api/growth/normInvitations',
+  connectionsSummary: `${baseURL}/relationships/connectionsSummary`,
+  peopleYouMayKnow: `${baseURL}/relationships/peopleYouMayKnow`,
+  peoplesearch: `${baseURL}/search/cluster`,
+  dashboard: `${baseURL}/identity/profiles/{username}/dashboard`,
+  profileDatas: `${baseURL}/messaging/conversations`,
+  normInvitations: `${baseURL}/growth/normInvitations`,
 };
 
 const headers = {
