@@ -62,6 +62,7 @@ function print(msg) {
 }
 
 function resolveNewLines(text) {
+  text = text || '';
   return text.replace(/[\n\r]+/g, ' ').trim();
 }
 
