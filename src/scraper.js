@@ -23,6 +23,10 @@ function startScraping() {
     })
     .catch((err) => {
       onError(err);
+      if (err.response.status == 303) {
+        let cookies = utils.parseToCookieKeyValuePairs(err.response.headers['set-cookie']);
+        fetchNextPeoples(cookies);
+      }
     });
 }
 
