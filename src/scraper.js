@@ -22,10 +22,14 @@ function startScraping() {
       fetchNextPeoples(sessionCookies);
     })
     .catch((err) => {
-      onError(err);
-      if (err.response.status == 303) {
-        let cookies = utils.parseToCookieKeyValuePairs(err.response.headers['set-cookie']);
+      if (err.response.status === 303) {
+        utils.print(`\n  ${colors.green('Connected.')}`);
+        utils.print('\n  ');
+        utils.startTimer();
+        const cookies = utils.parseToCookieKeyValuePairs(err.response.headers['set-cookie']);
         fetchNextPeoples(cookies);
+      } else {
+        onError(err);
       }
     });
 }
